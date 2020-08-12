@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "npx -n --experimental-vm-modules jest",
-    "build": "NODE_ENV=production babel src --out-dir dist",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -26,8 +26,7 @@
     "dist"
   ],
   "jest": {
-    "testEnvironment": "node",
-    "transform": {}
+    "testEnvironment": "node"
   },
   "homepage": "https://github.com/hexlet-boilerplates/nodejs-package#readme",
   "dependencies": {
@@ -39,12 +38,13 @@
     "@babel/core": "^7.11.0",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
+    "babel-jest": "^26.3.0",
     "debug": "^4.1.1",
     "eslint": "^7.4.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^23.18.0",
-    "jest": "^26.1.0",
+    "jest": "^26.3.0",
     "jest-cli": "^26.1.0"
   }
 }
